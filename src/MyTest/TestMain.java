@@ -1,15 +1,12 @@
 package MyTest;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.security.MessageDigest;
+import MyTest.MyClasses.Person;
+import MyTest.MyClasses.Specialty;
+import MyTest.MyClasses.StreamPersonUtil;
+
+import java.io.*;
 import java.security.NoSuchAlgorithmException;
 import java.util.*;
-import java.util.function.BinaryOperator;
-import java.util.function.Consumer;
-import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 public class TestMain {
@@ -31,19 +28,24 @@ public class TestMain {
 //                System.out.println(i);
 //        };
 //        consumer.accept(10);
-        BufferedReader reader = new BufferedReader(new FileReader(""));
+        Scanner scanner1 = new Scanner(new BufferedReader(new InputStreamReader(System.in)));
 
-       
+        String s = scanner1.nextLine();
 
-        List<Integer> list = new ArrayList<>(Arrays.asList(1, 4, 6, 23, 45, 31, 8, 9, 45));
+        System.out.println(s);
 
-        List<String> newList = list.stream().filter(x -> x > 30)
-                .filter(x -> x <45)
+        List<Person> list = StreamPersonUtil.getPersonList();
+        Scanner scanner = new Scanner(System.in);
+        if (scanner.hasNextInt()) {
+            int i = scanner.nextInt();
+            System.out.println(i);
+        }
 
-                .sorted(Comparator.reverseOrder())
-                .map(x -> String.valueOf(x))
-                .collect(Collectors.toList());
-        System.out.println(newList);
+
+        Map<Specialty, List<Person>> newPerson = list.stream()
+                .collect(Collectors.groupingBy(person -> person.getSpecialty()));
+        System.out.println(newPerson);
+
 
 //        BinaryOperator<Integer> binaryOperator = (integer, integer2) -> integer * integer2;
 //        System.out.println(binaryOperator.apply(2,4));
