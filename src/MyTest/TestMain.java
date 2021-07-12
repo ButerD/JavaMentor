@@ -1,8 +1,10 @@
 package MyTest;
 
 import MyTest.MyClasses.Person;
+import MyTest.MyClasses.Sex;
 import MyTest.MyClasses.Specialty;
 import MyTest.MyClasses.StreamPersonUtil;
+
 
 import java.io.*;
 import java.math.BigInteger;
@@ -16,11 +18,11 @@ public class TestMain {
 
     public static void main(String[] args) {
 
-        byte a = -0b1111111;
+        Integer a = 300;
+        Integer b = a;
 
-        BigInteger result = BigInteger.ONE;
-        System.out.println(a);
-
+        System.out.println(- 20 % 2);
 
     }
+
 }

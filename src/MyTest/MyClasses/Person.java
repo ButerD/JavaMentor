@@ -22,12 +22,26 @@ public class Person {
         return sex;
     }
 
+    public Person(String name) {
+        this.name = name;
+    }
+
+    public Person() {
+    }
+
+     public void setAge(int age) {
+        this.age = age;
+
+    }
+
     public Person(String name, int age, Specialty specialty, Sex sex) {
         this.name = name;
         this.age = age;
         this.specialty = specialty;
         this.sex = sex;
     }
+
+
 
     @Override
     public String toString() {
