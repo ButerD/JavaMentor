@@ -1,28 +1,36 @@
 package MyTest;
 
-import MyTest.MyClasses.Person;
-import MyTest.MyClasses.Sex;
-import MyTest.MyClasses.Specialty;
-import MyTest.MyClasses.StreamPersonUtil;
 
+import java.util.Arrays;
 
-import java.io.*;
-import java.math.BigInteger;
-import java.security.NoSuchAlgorithmException;
-import java.util.*;
-import java.util.stream.Collectors;
+import static java.lang.System.out;
 
 public class TestMain {
-
+    public static final int i = 10;
 
 
     public static void main(String[] args) {
-
-        Integer a = 300;
-        Integer b = a;
-
-        System.out.println(- 20 % 2);
+        Object i = Integer.valueOf(42);
+        try {
+            out.println(5 / 0);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        IllegalStateException
+        out.println("11111");
 
     }
 
+
+    public static void s(Integer[] a) {
+        a[0] = 10;
+
+    }
+
+
+
 }
+
+
+
+

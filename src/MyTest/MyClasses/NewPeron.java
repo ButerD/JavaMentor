@@ -1,6 +1,6 @@
 
 package MyTest.MyClasses;
-public class NewPeron extends Person {
+public class NewPeron  {
 
 
 }

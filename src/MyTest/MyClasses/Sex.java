@@ -1,6 +1,7 @@
 package MyTest.MyClasses;
 
-public enum Sex {
+public enum Sex
+{
     MALE("М"), FEMALE("Ж");
 
     private String translation;

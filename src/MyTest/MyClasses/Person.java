@@ -1,6 +1,6 @@
 package MyTest.MyClasses;
 
-public class Person {
+public  class Person {
     private String name;
     private int age;
     private Specialty specialty;
@@ -26,10 +26,14 @@ public class Person {
         this.name = name;
     }
 
-    public Person() {
+    private Person() {
     }
 
-     public void setAge(int age) {
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAge(int age) {
         this.age = age;
 
     }
