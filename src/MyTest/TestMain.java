@@ -3,27 +3,27 @@ package MyTest;
 
 import java.util.Arrays;
 
-import static java.lang.System.out;
 
 public class TestMain {
     public static final int i = 10;
 
 
     public static void main(String[] args) {
-        Object i = Integer.valueOf(42);
-        try {
-            out.println(5 / 0);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        IllegalStateException
-        out.println("11111");
+        Double a = 0.1;
+        Double b = 0.1;
+        String s = "1a";
+        int i;
 
+        try {
+            print();
+        } catch (Exception e) {
+
+        }
+        System.out.println("11");
     }
 
-
-    public static void s(Integer[] a) {
-        a[0] = 10;
+    public static void print() {
+        throw new RuntimeException();
 
     }
 
