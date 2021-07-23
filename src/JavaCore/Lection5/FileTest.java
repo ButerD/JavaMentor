@@ -1,8 +1,8 @@
 package JavaCore.Lection5;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.*;
 
 public class FileTest {
@@ -10,11 +10,19 @@ public class FileTest {
         File file = new File("d:\\");
         Path path = file.toPath();
 
-        InputStream is = Files.newInputStream(Paths.get("1.txt"));
+        OutputStream outputStream = new ByteArrayOutputStream();
+        Writer writer = new OutputStreamWriter(outputStream, StandardCharsets.US_ASCII);
 
-        byte[] buff = is.readAllBytes();
+        writer.write(500);
+        writer.flush();
+        System.out.println();
 
-        System.out.println(new String(buff));
+//        InputStream is = Files.newInputStream(Paths.get("1.txt"));
+//
+//        byte[] buff = is.readAllBytes();
+//
+//        System.out.println(new String(buff));
+
 
 //        SimpleFileVisitor sfv = new SimpleFileVisitor() {
 //            @Override
