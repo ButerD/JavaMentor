@@ -1,0 +1,15 @@
+package JavaCore.Lection3.task357;
+
+public class NegativeTextAnalyzer extends KeywordAnalyzer{
+    private String[] keywords = {":(", "=(", ":|"};
+
+    @Override
+    protected String[] getKeywords() {
+        return keywords;
+    }
+
+    @Override
+    protected Label getLabel() {
+        return Label.NEGATIVE_TEXT;
+    }
+}
