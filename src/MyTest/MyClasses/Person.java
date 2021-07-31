@@ -26,7 +26,7 @@ public  class Person {
         this.name = name;
     }
 
-    private Person() {
+    public Person() {
     }
 
     public void setName(String name) {

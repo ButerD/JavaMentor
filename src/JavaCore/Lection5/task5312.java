@@ -7,11 +7,10 @@ public class task5312 {
         Scanner scanner = new Scanner(System.in);
         double result = 0;
         while (scanner.hasNext()) {
-            String s = scanner.next();
-            try {
-                double parseValue = Double.parseDouble(s);
-                result += parseValue;
-            } catch (NumberFormatException e) {
+            if (scanner.hasNextDouble()) {
+                result += scanner.nextDouble();
+            } else {
+                scanner.next();
             }
         }
         System.out.printf("%.6f", result);

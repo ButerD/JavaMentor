@@ -1,0 +1,27 @@
+Поток — это
+абстрактная сущность, представляющая устройства ввода-вывода, которая вы-
+дает и получает информацию.
+
+
+FileInputStream is = new FileInputStream("...");
+Reader ir = new InputStreamReader(is, StandardCharsets.UTF_8);
+BufferedReader br = new BufferedReader(ir);
+br.readLine();
+Поток — это
+абстрактная сущность, представляющая устройства ввода-вывода, которая вы-
+дает и получает информацию.
+
+
+FileInputStream is = new FileInputStream("...");
+Reader ir = new InputStreamReader(is, StandardCharsets.UTF_8);
+BufferedReader br = new BufferedReader(ir);
+br.readLine();
+Поток — это
+абстрактная сущность, представляющая устройства ввода-вывода, которая вы-
+дает и получает информацию.
+
+
+FileInputStream is = new FileInputStream("...");
+Reader ir = new InputStreamReader(is, StandardCharsets.UTF_8);
+BufferedReader br = new BufferedReader(ir);
+br.readLine();

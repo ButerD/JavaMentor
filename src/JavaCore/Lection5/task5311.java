@@ -1,13 +1,17 @@
 package JavaCore.Lection5;
 
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.nio.charset.Charset;
 
 public class task5311 {
     public static String readAsString(InputStream inputStream, Charset charset) throws IOException {
-        byte[] bytes = inputStream.readAllBytes();
+        InputStreamReader isr = new InputStreamReader(inputStream, charset);
 
-        return new String(bytes, charset);
+        StringWriter sw = new StringWriter();
+        int b;
+        while((b = isr.read()) != -1) {
+            sw.write(b);
+        }
+        return sw.toString();
     }
 }

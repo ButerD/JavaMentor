@@ -10,12 +10,36 @@ public class FileTest {
         File file = new File("d:\\");
         Path path = file.toPath();
 
-        OutputStream outputStream = new ByteArrayOutputStream();
-        Writer writer = new OutputStreamWriter(outputStream, StandardCharsets.US_ASCII);
+        DirectoryStream<Path> dirStream = Files.newDirectoryStream(path);
+        for (Path path1 : dirStream) {
+            if(Files.isDirectory(path1)) {
+                System.out.println(path1);
+            }
+        }
+        dirStream.close();
+//        ProcessBuilder processBuilder = new ProcessBuilder();
+//
+//        // Run this on Windows, cmd, /c = terminate after this run
+//        processBuilder.command("cmd.exe","/c", "dir");
+//
+//
+//
+//            Process process = processBuilder.start();
+//
+//            // blocked :(
+//            BufferedReader reader =
+//                    new BufferedReader(new InputStreamReader(process.getInputStream()));
+//
+//            String line;
+//            while ((line = reader.readLine()) != null) {
+//                System.out.println(line);
+//            }
 
-        writer.write(500);
-        writer.flush();
-        System.out.println();
+
+
+
+
+
 
 //        InputStream is = Files.newInputStream(Paths.get("1.txt"));
 //

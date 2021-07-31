@@ -1,6 +1,15 @@
 package MyTest;
 
 
+import MyTest.MyClasses.Worker;
+
+import javax.swing.tree.TreeNode;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.FileVisitResult;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.SimpleFileVisitor;
 import java.util.Arrays;
 
 
@@ -8,27 +17,20 @@ public class TestMain {
     public static final int i = 10;
 
 
-    public static void main(String[] args) {
-        Double a = 0.1;
-        Double b = 0.1;
-        String s = "1a";
-        int i;
+    public static void main(String[] args) throws IOException {
 
-        try {
-            print();
-        } catch (Exception e) {
 
-        }
-        System.out.println("11");
+        Worker worker = new Worker("Worker", "message");
+        InputStream is = new InputStream() {
+            @Override
+            public int read() throws IOException {
+                return 0;
+            }
+        };
+//        is = System.in;
+
+        is.read();
     }
-
-    public static void print() {
-        throw new RuntimeException();
-
-    }
-
-
-
 }
 
 
