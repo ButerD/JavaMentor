@@ -14,5 +14,7 @@ public class WriteObj {
         ous.writeInt(size);
         ous.writeObject(animal);
 
+
+
     }
 }
