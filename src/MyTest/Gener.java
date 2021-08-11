@@ -7,6 +7,7 @@ import java.util.List;
 
 public class Gener<T>  {
 
+
     static <T> void met(T a) {
         System.out.println("Static");
     }

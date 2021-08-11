@@ -13,9 +13,8 @@ public class task719 {
         Function<CharSequence, Integer> ifFalse = charSequence -> charSequence.length();
         Function<String, Integer> safeStringLength = ternaryOperator(condition, ifTrue, ifFalse);
 
-        String s = "null";
+       
 
-        System.out.println(condition.test(s));
 
     }
 

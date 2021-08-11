@@ -5,19 +5,19 @@ import java.util.Arrays;
 
 public class task6113 {
     public static class DynamicArray<T> {
-        private T[] elements;
+        private Object[] elements;
 
         private int realSize;
 
         public DynamicArray() {
             realSize = 0;
-            elements = (T[]) (new Object[10]);
+            elements = (T[]) (new Object[5]);
         }
 
         public void add(T el) {
-            if (realSize >= elements.length) {
-                T[] tmpArray;
-                tmpArray = Arrays.copyOf(elements, elements.length + 10);
+            if (realSize == (elements.length - 1)) {
+                Object[]  tmpArray;
+                tmpArray = Arrays.copyOf(elements, elements.length * 2);
                 elements = tmpArray;
             }
             elements[realSize] = el;
@@ -52,7 +52,7 @@ public class task6113 {
         da.add(3);
         da.add(4);
         da.add(5);
-        da.remove(3);
+
         da.add(0);
         da.add(1);
         da.add(2);
